@@ -23,6 +23,9 @@ if a>=b:
 else:
     print("Max: ",b)
     print("Min: ",a)
+pass
+
+#pass is to do nothing, easier to see basically }
 
 # A: 13
 # B: 20
