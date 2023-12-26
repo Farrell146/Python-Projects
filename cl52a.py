@@ -16,3 +16,5 @@ class rectangle:
     def getperem(self):
         return self.perem
     
+
+#prog52acl
