@@ -11,9 +11,11 @@ for checker in range(len(word)):
         a+=1
 
 
-print(str(a),"vowels and",str(len(word)-a)," consonants")
+print(str(a),"vowels and",str(len(word)-a),"consonants")
 
 """
 Enter: java
 2 vowels and 2  consonants
 """
+
+#len(word.replace(' ', ''))-a to get the number of consonants in case it's a whole sentence
