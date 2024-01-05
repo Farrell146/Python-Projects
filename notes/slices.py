@@ -16,3 +16,29 @@ print(strHi[-1])
 print(strHi[-6:-1])
 print(strHi[::-1])  # returns the string in reverse order; also reversed(strHi) works
 print(strHi == strHi[::-1])
+
+"""
+evens = [n for n in range(0,11) if n%2==0]
+odds = [n+1 for n in evens[:-1]
+
+
+Should print 
+0,2,4,6,8,10
+1,3,5,7,9
+"""
+
+"""
+return sum(nums)
+"""
+
+"""
+product
+import math
+
+def wtf(nums):
+  return math.prod(nums)
+"""
+
+"""
+to return a list with all the same numbers, can do return[a]*x (x being the amound of numbers in the list)
+"""
