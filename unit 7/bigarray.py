@@ -17,42 +17,30 @@ def main():
             catlist.append(newcat)
 
             catscrape+=4
+
+        def printcat(cat):
+            print(f"{cat.name}\t{cat.weight}\t{cat.age}\t{cat.cost}")
         
-        def getList(cat):
-            return f"{cat.name}\t{cat.weight}\t{cat.age}\t{cat.cost}"
-
-        def getName(cat):
-            return cat.name
-    
-        def getWeight(cat):
-            return cat.weight
-    
-        def getAge(cat):
-            return cat.age
-    
-        def getCost(cat):
-            return cat.cost
-
         #1 Print out all the cats (there is no toString() available)
         print("All the cats:")
         print("Name\tWeight\tAge\tCost")
         for lcv in range(len(catlist)):
-            print(str(getList(catlist[lcv])))
+            printcat(catlist[lcv])
         print()
         
         #2 Print the name of the 3rd cat.
-        print("3rd Cat:", str(getName(catlist[2])))
+        print("3rd Cat:", catlist[2].name)
         print()
         
         #3 The last cat has gained 10 pounds. Update the weight on the object. Print the new weight.
-        newweight = getName(catlist[-1]), getWeight(catlist[-1])+10, getAge(catlist[-1]), getCost(catlist[-1])
+        newweight = catlist[-1].name, catlist[-1].weight+10, catlist[-1].age, catlist[-1].cost
         catlist[-1] = Cat(*newweight)
-        print("Updated weight is:",getWeight(catlist[-1]))
+        print("Updated weight is:",catlist[-1].weight)
         print()
         
         #4 The cat named Rascal died. Find that cat and remove it from the list
         for riprascal in range(len(catlist)):
-            if getName(catlist[riprascal]) == "Rascal":
+            if catlist[riprascal].name == "Rascal":
                 catlist.remove(catlist[riprascal])
                 break
         
@@ -68,7 +56,7 @@ def main():
         print("Updated list:")
         print("Name\tWeight\tAge\tCost")
         for x in range(len(catlist)):
-           print(getList(catlist[x]))
+           printcat(catlist[x])
         print()
         
         #8 Replace the 3rd cat with (Sugar, 23.6, 7, 33.25) put the removed cat at the end of the list.
@@ -85,7 +73,7 @@ def main():
         print("Current Names:")
         names=[]
         for y in range(len(catlist)):
-           names.append(getName(catlist[y]))
+           names.append(catlist[y].name)
         a=" ".join(names)
         print(a)
         print()
@@ -94,7 +82,7 @@ def main():
         void=Cat("Void",0,0,0)
         voidcnt=0
         for cheapcat in range(len(catlist)):
-           if getCost(catlist[cheapcat]) < 26.00:
+           if catlist[cheapcat].cost < 26.00:
               catlist[cheapcat]=void
               voidcnt+=1
         
@@ -108,7 +96,7 @@ def main():
         print("Cats costing $26 or more actually cost:")
         Costs=[]
         for k in range(len(catlist)):
-           Costs.append(getCost(catlist[k]))
+           Costs.append(catlist[k].cost)
         a="".join(str(Costs))
         print(a)
         print()
@@ -116,8 +104,8 @@ def main():
         #12 All cats heavier than 15 pounds need to go on a diet <--  no for-each this time.
         fat=[]
         for eat in range(len(catlist)):
-           if getWeight(catlist[eat])>15:
-              fat.append(getName(catlist[eat]))
+           if catlist[eat].weight>15:
+              fat.append(catlist[eat].name)
         print("Fat Cats:")
         a=" ".join(fat)
         print(a)
