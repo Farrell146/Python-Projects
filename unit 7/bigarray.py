@@ -33,8 +33,7 @@ def main():
         print()
         
         #3 The last cat has gained 10 pounds. Update the weight on the object. Print the new weight.
-        newweight = catlist[-1].name, catlist[-1].weight+10, catlist[-1].age, catlist[-1].cost
-        catlist[-1] = Cat(*newweight)
+        catlist[-1].weight += 10
         print("Updated weight is:",catlist[-1].weight)
         print()
         
@@ -55,8 +54,8 @@ def main():
         #7 Print the updated list with a for-each loop
         print("Updated list:")
         print("Name\tWeight\tAge\tCost")
-        for x in range(len(catlist)):
-           printcat(catlist[x])
+        for catt in catlist:
+            printcat(catt)
         print()
         
         #8 Replace the 3rd cat with (Sugar, 23.6, 7, 33.25) put the removed cat at the end of the list.
