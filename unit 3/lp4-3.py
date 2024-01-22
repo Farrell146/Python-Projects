@@ -1,6 +1,6 @@
 eggs = int(input("Number of eggs: "))
 
-# "//" divides then rounds down to nearest int
+# "//" divides then rounds down to nearest int (floor divide)
 doz = eggs//12
 
 # "%" is modulus - the remainder of long division
